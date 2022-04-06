@@ -6,7 +6,8 @@ public class BinaryTreeInts {
 		
 		if (current == null ) { 
 			// System.out.println("new tree!");
-			return new node (data);
+			current = new node (data);
+		
 		}
 		
 		//current = head; 
@@ -36,6 +37,27 @@ public class BinaryTreeInts {
 			 printTree(current.rightChild);
 		 }
 		
+	}
+	
+	public void postOrder(node current) { 
+		if(current!= null) { 
+			printTree(current.leftChild); 
+			printTree(current.rightChild);
+			System.out.println(" " + current.data);
+			
+			
+		}
+	}
+	
+	public void preOrder(node current) { 
+		if(current!= null) { 
+			System.out.println(" " + current.data);
+			printTree(current.leftChild); 
+			printTree(current.rightChild);
+			
+			
+			
+		}
 	}
 	
 	public boolean isEmpty() { 
